@@ -6,7 +6,9 @@ public class MouseInputManager : MonoBehaviour
 {
     public static MouseInputManager instance;
     private PlayerControls Player_Controls;
+    [SerializeField] private SettingsValueHolder Settings_Value;
 
+    private Vector2 Mouse_Raw;
     public Vector2 Mouse_Input;
 
 
@@ -37,6 +39,7 @@ public class MouseInputManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        Mouse_Input = Player_Controls.Player.Mouse.ReadValue<Vector2>();
+        Mouse_Raw = Player_Controls.Player.Mouse.ReadValue<Vector2>();
+        Mouse_Input = new Vector2(Mouse_Raw.x*Settings_Value.Mouse_Sensitivity, -Mouse_Raw.y * Settings_Value.Mouse_Sensitivity);
     }
 }
