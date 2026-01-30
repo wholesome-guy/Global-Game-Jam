@@ -28,6 +28,12 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
+    private void Start()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     private void FixedUpdate()
     {
         Player_Rigidbody.AddForce(Move_Direction.normalized * Move_Speed, ForceMode.Force);

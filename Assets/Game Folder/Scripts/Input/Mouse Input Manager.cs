@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseInputManager : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class MouseInputManager : MonoBehaviour
 
     private Vector2 Mouse_Raw;
     public Vector2 Mouse_Input;
+
+    public Action Shoot_Event;
 
 
     private void Awake()
@@ -30,16 +34,25 @@ public class MouseInputManager : MonoBehaviour
     private void OnEnable()
     {
         Player_Controls.Enable();
+
+        Player_Controls.Player.Shoot.performed += Shoot_Function;
     }
 
     private void OnDisable()
     {
         Player_Controls.Disable();
+        Player_Controls.Player.Shoot.performed -= Shoot_Function;
+
     }
 
     void FixedUpdate()
     {
         Mouse_Raw = Player_Controls.Player.Mouse.ReadValue<Vector2>();
         Mouse_Input = new Vector2(Mouse_Raw.x*Settings_Value.Mouse_Sensitivity, -Mouse_Raw.y * Settings_Value.Mouse_Sensitivity);
+    }
+
+    private void Shoot_Function(InputAction.CallbackContext context)
+    {
+        Shoot_Event.Invoke();
     }
 }
