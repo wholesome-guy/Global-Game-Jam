@@ -41,7 +41,7 @@ public class ReputationSystem : MonoBehaviour
 
         Reputation_Change_Text.DOColor((change < 0) ? Increase_Color : Decrease_Color, 0);
 
-        TransitionManager.UI_Fader_Event.Invoke(Reputation_Change_group, 0, 1, Change_Text_Disappear_Time);
+        Reputation_Change_group.alpha = 1;
         StartCoroutine(Change_Fade_Out());
     }
 

@@ -4534,7 +4534,7 @@ MonoBehaviour:
   Reputation_Change_Text: {fileID: 86536323}
   Increase_Color: {r: 0.17254902, g: 1, b: 0, a: 1}
   Decrease_Color: {r: 1, g: 0, b: 0, a: 1}
-  Change_Text_Disappear_Time: 3
+  Change_Text_Disappear_Time: 1.5
   Reputation_Change_group: {fileID: 86536326}
 --- !u!1 &787297079
 GameObject:

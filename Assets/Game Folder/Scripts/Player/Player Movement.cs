@@ -108,8 +108,7 @@ public class PlayerMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Is_Inputing = true;
         Player_Rigidbody.constraints = RigidbodyConstraints.None;
-        Player_Rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
-        Player_Rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
+        Player_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
 
 
     }
