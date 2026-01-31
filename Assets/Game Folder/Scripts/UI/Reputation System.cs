@@ -34,9 +34,9 @@ public class ReputationSystem : MonoBehaviour
 
         if (Mathf.Abs(change) <= 0.001f) return;
 
-        Reputation_Change_Text.text = (change * 100f / Max_Reputation).ToString("f2") + "%";
+        Reputation_Change_Text.text = (change < 0 ? "+" : "-") + (Mathf.Abs(change) * 100f / Max_Reputation).ToString("f2") + "%";
 
-        Reputation_Change_Text.color = (change < 0) ? Increase_Color : Decrease_Color;
+        Reputation_Change_Text.DOColor((change < 0) ? Increase_Color : Decrease_Color, 0);
 
         Reputation_Change_Text.DOColor((change < 0) ? Transparent_Increase_Color : Transparent_Decrease_Color, Change_Text_Disappear_Time);
 

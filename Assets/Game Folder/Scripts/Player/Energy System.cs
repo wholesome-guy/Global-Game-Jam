@@ -36,6 +36,13 @@ public class EnergySystem : MonoBehaviour
     {
         Current_Energy -= change;
 
+        if (Mathf.Abs(change) <= Passive_Energy_Loss) return;
+
+        Energy_Change_Text.text = (change < 0 ? "+" : "-") + (Mathf.Abs(change) * 100f / Max_Energy).ToString("f2") + "%";
+
+        Energy_Change_Text.DOColor((change < 0) ? Increase_Color : Decrease_Color, 0);
+
+        Energy_Change_Text.DOColor((change < 0) ? Transparent_Increase_Color : Transparent_Decrease_Color, Change_Text_Disappear_Time);
     }
 
     public void Set_Energy_Before_Decision()
