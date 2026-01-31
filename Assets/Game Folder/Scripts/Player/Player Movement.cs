@@ -98,13 +98,20 @@ public class PlayerMovement : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        Is_Inputing = false;    
+        Is_Inputing = false;
+        Player_Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+
     }
     public void End_Interact()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         Is_Inputing = true;
+        Player_Rigidbody.constraints = RigidbodyConstraints.None;
+        Player_Rigidbody.constraints = RigidbodyConstraints.FreezePositionX;
+        Player_Rigidbody.constraints = RigidbodyConstraints.FreezePositionZ;
+
+
     }
 
 
