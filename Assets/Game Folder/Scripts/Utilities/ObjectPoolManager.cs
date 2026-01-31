@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,23 @@ public class ObjectPoolManager : MonoBehaviour
     }
     #endregion
 
+    public enum Scene
+    {
+        Main_Menu,
+            Game
+    }
+
+    public Scene Current_Scene;
+
+    private void Start()
+    {
+        if(Current_Scene == Scene.Game)
+        {
+            //Preload_Game();
+        }
+    }
+
+    
 
     #region Sound Effects Object
     [SerializeField] private GameObject Sound_Effects_Object;
@@ -191,5 +209,4 @@ public class ObjectPoolManager : MonoBehaviour
     }
     #endregion
 
-    
 }

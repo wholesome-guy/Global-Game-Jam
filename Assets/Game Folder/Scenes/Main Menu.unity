@@ -993,6 +993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad4a40b92bfc1c149a7cd04a381fe9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Current_Scene: 0
   Sound_Effects_Object: {fileID: 2119119875321191086, guid: 0b2c45993a7311841b62a131e49d5015,
     type: 3}
   Sound_Effects_PreLoad_Count: 10

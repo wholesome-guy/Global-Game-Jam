@@ -25,9 +25,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Shoot",
+                    "name": "Interact",
                     "type": "Button",
-                    "id": "d3cd1b46-514a-4a90-b174-16298aca3115",
+                    "id": "968c9f01-1981-444a-8698-d6b99dfe9393",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -103,12 +103,12 @@
                 },
                 {
                     "name": "",
-                    "id": "9dd42f34-456d-43bc-81f2-6f2c4a435b33",
-                    "path": "<Mouse>/leftButton",
+                    "id": "cabf954e-6aa4-4eed-86f9-723ee98f01b8",
+                    "path": "<Keyboard>/f",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Shoot",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
