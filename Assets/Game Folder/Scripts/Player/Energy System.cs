@@ -1,3 +1,4 @@
+using DG.Tweening;
 using DialogueEditor;
 using TMPro;
 using UnityEngine;
@@ -10,6 +11,12 @@ public class EnergySystem : MonoBehaviour
     [SerializeField] private float Passive_Energy_Loss = 0.05f;
     private float Ratio_Current_Max_Energy;
     [SerializeField] private TextMeshProUGUI Energy_Text;
+    [SerializeField] private TextMeshProUGUI Energy_Change_Text;
+    [SerializeField] private Color Increase_Color;
+    [SerializeField] private Color Transparent_Increase_Color;
+    [SerializeField] private Color Decrease_Color;
+    [SerializeField] private Color Transparent_Decrease_Color;
+    [SerializeField] private float Change_Text_Disappear_Time;
 
     private void Start()
     {
@@ -28,6 +35,7 @@ public class EnergySystem : MonoBehaviour
     public void Energy_Deplete(float change)
     {
         Current_Energy -= change;
+
     }
 
     public void Set_Energy_Before_Decision()
