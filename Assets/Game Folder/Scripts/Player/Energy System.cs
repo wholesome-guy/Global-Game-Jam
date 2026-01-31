@@ -2,6 +2,8 @@ using DG.Tweening;
 using DialogueEditor;
 using TMPro;
 using UnityEngine;
+using System.Collections;
+
 
 public class EnergySystem : MonoBehaviour
 {
@@ -13,9 +15,9 @@ public class EnergySystem : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Energy_Text;
     [SerializeField] private TextMeshProUGUI Energy_Change_Text;
     [SerializeField] private Color Increase_Color;
-    [SerializeField] private Color Transparent_Increase_Color;
     [SerializeField] private Color Decrease_Color;
-    [SerializeField] private Color Transparent_Decrease_Color;
+
+    [SerializeField] private CanvasGroup Energy_Change_group;
     [SerializeField] private float Change_Text_Disappear_Time;
 
     private void Start()
@@ -42,7 +44,17 @@ public class EnergySystem : MonoBehaviour
 
         Energy_Change_Text.DOColor((change < 0) ? Increase_Color : Decrease_Color, 0);
 
-        Energy_Change_Text.DOColor((change < 0) ? Transparent_Increase_Color : Transparent_Decrease_Color, Change_Text_Disappear_Time);
+        TransitionManager.UI_Fader_Event.Invoke(Energy_Change_group, 0, 1, Change_Text_Disappear_Time);
+
+        StartCoroutine(Change_Fade_Out());
+    }
+
+    private IEnumerator Change_Fade_Out()
+    {
+        yield return new WaitForSeconds(Change_Text_Disappear_Time + 0.5f);
+
+        TransitionManager.UI_Fader_Event.Invoke(Energy_Change_group, 1, 0, Change_Text_Disappear_Time);
+
     }
 
     public void Set_Energy_Before_Decision()
