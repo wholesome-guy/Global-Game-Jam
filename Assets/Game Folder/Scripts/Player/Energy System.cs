@@ -42,9 +42,9 @@ public class EnergySystem : MonoBehaviour
 
         Energy_Change_Text.text = (change < 0 ? "+" : "-") + (Mathf.Abs(change) * 100f / Max_Energy).ToString("f2") + "%";
 
-        Energy_Change_Text.DOColor((change < 0) ? Increase_Color : Decrease_Color, 0);
+        Energy_Change_Text.color = (change < 0) ? Increase_Color : Decrease_Color;
 
-        TransitionManager.UI_Fader_Event.Invoke(Energy_Change_group, 0, 1, Change_Text_Disappear_Time);
+        Energy_Change_group.alpha = 1;
 
         StartCoroutine(Change_Fade_Out());
     }
