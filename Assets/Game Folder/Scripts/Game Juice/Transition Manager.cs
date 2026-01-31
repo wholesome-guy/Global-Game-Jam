@@ -51,6 +51,7 @@ public class TransitionManager : MonoBehaviour
 
     public void Transition_Function(Texture2D Transition_Texture, float Start, float End, float Duration)
     {
+        Transition_Image.gameObject.SetActive(true);
         Transition_Material = Transition_Image.material; 
         Transition_Material.SetTexture(Transition_Texture_ID, Transition_Texture);
 
@@ -69,6 +70,8 @@ public class TransitionManager : MonoBehaviour
             yield return null;
         }
         Transition_Material.SetFloat(Transition_Amount_ID, End);
+        Transition_Image.gameObject.SetActive(false);
+
     }
 }
 

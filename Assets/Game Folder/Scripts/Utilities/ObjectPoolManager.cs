@@ -32,9 +32,9 @@ public class ObjectPoolManager : MonoBehaviour
 
     private void Start()
     {
-        if(Current_Scene == Scene.Game)
+        if(Current_Scene == Scene.Main_Menu)
         {
-            //Preload_Game();
+            Preload_Sound_Effects_Object();
         }
     }
 
