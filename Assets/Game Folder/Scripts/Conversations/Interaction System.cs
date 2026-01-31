@@ -16,7 +16,7 @@ public class InteractionSystem : MonoBehaviour
     }
     private void OnDisable()
     {
-        Press_F_Visible_Event += Press_F_Function;
+        Press_F_Visible_Event -= Press_F_Function;
     }
     public void End_Interaction_Function()
     {
