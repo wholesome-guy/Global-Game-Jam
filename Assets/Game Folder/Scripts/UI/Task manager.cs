@@ -28,4 +28,9 @@ public class Taskmanager : MonoBehaviour
                 break;
         }
     }
+    [SerializeField] private AudioClip Task_Complete_clip;
+    public void Task_Complete()
+    {
+        SoundEffectsManager.instance.Play_Single_Sound_Effect(Task_Complete_clip,transform,0.2f,0f);
+    }
 }

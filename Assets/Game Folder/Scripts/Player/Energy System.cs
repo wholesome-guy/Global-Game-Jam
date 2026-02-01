@@ -21,6 +21,8 @@ public class EnergySystem : MonoBehaviour
     [SerializeField] private CanvasGroup Energy_Change_group;
     [SerializeField] private float Change_Text_Disappear_Time;
 
+    [SerializeField] private AudioClip Lose;
+
     public static Action Energy_Over;
 
     private void Start()
@@ -52,9 +54,10 @@ public class EnergySystem : MonoBehaviour
 
         StartCoroutine(Change_Fade_Out());
 
-        if(Current_Energy <= 5)
+        if(Current_Energy <= 0)
         {
             Energy_Over.Invoke();
+            SoundEffectsManager.instance.Play_Single_Sound_Effect(Lose, transform, 1, 0);
         }
 
 

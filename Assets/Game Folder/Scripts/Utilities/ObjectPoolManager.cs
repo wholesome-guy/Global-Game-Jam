@@ -22,28 +22,43 @@ public class ObjectPoolManager : MonoBehaviour
     }
     #endregion
 
-    public enum Scene
+    
+
+    private void OnEnable()
     {
-        Main_Menu,
-            Game
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    public Scene Current_Scene;
-
-    private void Start()
+    private void OnDisable()
     {
-        if(Current_Scene == Scene.Main_Menu)
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        ClearAllPools();
+
+        if (scene.buildIndex == 0)
         {
             Preload_Sound_Effects_Object();
         }
-        else if(Current_Scene == Scene.Game)
+        else if (scene.buildIndex == 1)
         {
             Preload_Sound_Effects_Object();
-
+            Preload_Health_Particle();
+            Preload_Capture_Particle();
+            Preload_Hit_Particle();
         }
     }
 
     
+    private void ClearAllPools()
+    {
+        Health_Particle_VFX_Pool.Clear();
+        Capture_Particle_VFX_Pool.Clear();
+        Hit_Particle_VFX_Pool.Clear();
+        Sound_Effects_Object_Pool.Clear();
+    }
 
     #region Sound Effects Object
     [SerializeField] private GameObject Sound_Effects_Object;

@@ -5,7 +5,11 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Texture2D Transition_Texture;
-   public void Start_Click_Button()
+    private void Start()
+    {
+        TransitionManager.Transition_Screen_Event.Invoke(Transition_Texture, 1, 0, 3f);
+    }
+    public void Start_Click_Button()
    {
         StartCoroutine(Start_Button());
    }

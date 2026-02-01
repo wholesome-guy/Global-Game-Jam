@@ -37,7 +37,7 @@ public class CameraManager : MonoBehaviour
     private IEnumerator Camera_Shake_Coroutine()
     {
         Ideal_Noise_Component.m_AmplitudeGain = 0f;
-        Ideal_Noise_Component.m_AmplitudeGain = 10f;
+        Ideal_Noise_Component.m_AmplitudeGain = 5f;
 
         yield return WaitForSeconds_0_2;
 

@@ -77,16 +77,20 @@ public class SoundEffectsManager : MonoBehaviour
     [SerializeField] private AudioClip Hover;
     [SerializeField] private AudioClip UnHover;
     [SerializeField] private AudioClip Click;
+ 
+
     public void UI_Hover_SFX()
     {
-        Play_Single_Sound_Effect(Hover, transform, 1, 0);
+        Play_Single_Sound_Effect(Hover, transform, 0.6f, 0);
     }
     public void UI_UnHover_SFX()
     {
-        Play_Single_Sound_Effect(UnHover, transform, 1, 0);
+        Play_Single_Sound_Effect(UnHover, transform, 0.6f, 0);
     }
     public void UI_Click_SFX()
     {
-        Play_Single_Sound_Effect(Click, transform, 1, 0);
+        Play_Single_Sound_Effect(Click, transform, 0.6f, 0);
     }
+
+    
 }

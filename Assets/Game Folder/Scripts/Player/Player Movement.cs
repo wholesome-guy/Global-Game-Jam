@@ -34,7 +34,11 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private AudioSource FootSteps_Audio_Source;
     [SerializeField] private AudioClip[] FootSteps_Audio_Clips;
+
+    [SerializeField] private AudioSource Jump_Audio_Source;
     private bool Footstep_Heard = false;
+
+    [SerializeField] private AudioSource Music;
 
     private void Start()
     {
@@ -124,6 +128,7 @@ public class PlayerMovement : MonoBehaviour
     public void Jump()
     {
         Player_Rigidbody.AddForce(Player_Orientation.up*Jump_Force,ForceMode.Impulse);
+        Jump_Audio_Source.Play();
     }
     private void FootSteps()
     {
@@ -171,6 +176,7 @@ public class PlayerMovement : MonoBehaviour
         Is_Inputing = false;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        Music.Stop();
     }
 
 

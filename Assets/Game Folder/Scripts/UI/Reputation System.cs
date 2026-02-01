@@ -22,6 +22,9 @@ public class ReputationSystem : MonoBehaviour
     [SerializeField] private CanvasGroup Reputation_Change_group;
     public static Action Reputation_Over;
 
+    [SerializeField] private AudioClip Lose;
+
+
     private void Start()
     {
         Current_Reputation = Max_Reputation/2;
@@ -50,6 +53,8 @@ public class ReputationSystem : MonoBehaviour
         if(Current_Reputation <= 0)
         {
             Reputation_Over.Invoke();
+            SoundEffectsManager.instance.Play_Single_Sound_Effect(Lose, transform, 1, 0);
+
         }
     }
 

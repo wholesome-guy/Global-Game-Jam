@@ -569,6 +569,7 @@ namespace DialogueEditor
             if (option.Event != null)
                 option.Event.Invoke();
             SetState(eState.TransitioningOptionsOff);
+            SoundEffectsManager.instance.UI_Click_SFX();
         }
 
         public void EndButtonSelected()
@@ -740,6 +741,7 @@ namespace DialogueEditor
                 m_uiOptions[m_currentSelectedIndex].SetHovering(false);
             m_currentSelectedIndex = index;
             m_uiOptions[index].SetHovering(true);
+            SoundEffectsManager.instance.UI_Hover_SFX();
         }
 
         private void UnselectOption()
@@ -748,6 +750,8 @@ namespace DialogueEditor
 
             m_uiOptions[m_currentSelectedIndex].SetHovering(false);
             m_currentSelectedIndex = -1;
+            SoundEffectsManager.instance.UI_UnHover_SFX();
+
         }
 
         private UIConversationButton CreateButton()

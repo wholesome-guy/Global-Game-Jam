@@ -11,6 +11,9 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] private NPCManager Crush;
     [SerializeField] private NPCManager Neighbour;
 
+    [SerializeField] private AudioClip Encounter;
+    [SerializeField] private AudioClip Home;
+
     public static Action Victory_Event;
 
     private void OnTriggerEnter(Collider other)
@@ -20,6 +23,8 @@ public class PlayerCollision : MonoBehaviour
             keyboardInputManager.Can_Interact = true;
             InteractionSystem.Press_F_Visible_Event.Invoke(true);
             keyboardInputManager.Conversation_Trigger = other.GetComponent<ConversationTrigger>();
+
+            SoundEffectsManager.instance.Play_Single_Sound_Effect(Encounter, transform, 0.3f , 0);
 
             if (other.gameObject.CompareTag("Colleague"))
             {
@@ -62,6 +67,7 @@ public class PlayerCollision : MonoBehaviour
         if (other.gameObject.CompareTag("Home"))
         {
             Victory_Event.Invoke();
+            SoundEffectsManager.instance.Play_Single_Sound_Effect(Home, transform, 1, 0.5f);
         }
     }
     private void OnTriggerExit(Collider other)

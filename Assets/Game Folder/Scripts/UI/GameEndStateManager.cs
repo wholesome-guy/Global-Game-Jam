@@ -14,7 +14,11 @@ public class GameEndStateManager : MonoBehaviour
     [SerializeField] private CanvasGroup Canvas_Group;
 
     [SerializeField] private Texture2D Transition_Texture;
+    private void Start()
+    {
+        TransitionManager.Transition_Screen_Event(Transition_Texture, 1, 0, 3);
 
+    }
     private void Loss_To_Energy()
     {
         Canvas_Group.alpha = 0;
@@ -32,7 +36,7 @@ public class GameEndStateManager : MonoBehaviour
         TransitionManager.UI_Fader_Event(Canvas_Group, 0, 1, 1.0f);
         End_State_Image.sprite = End_State_Sprites[1];
         Heading.text = "UNMASKED";
-        Subheading.text = "Your ran out of reputation";
+        Subheading.text = "You ran out of reputation";
     }
 
     private void Victory()
