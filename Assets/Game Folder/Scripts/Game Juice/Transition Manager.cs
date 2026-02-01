@@ -70,7 +70,7 @@ public class TransitionManager : MonoBehaviour
             yield return null;
         }
         Transition_Material.SetFloat(Transition_Amount_ID, End);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         Transition_Image.gameObject.SetActive(false);
 
     }

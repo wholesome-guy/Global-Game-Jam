@@ -5,6 +5,7 @@ using UnityEngine;
 public class Taskmanager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI Task_text;
+    
 
     public void New_Task(int i)
     {
@@ -33,4 +34,5 @@ public class Taskmanager : MonoBehaviour
     {
         SoundEffectsManager.instance.Play_Single_Sound_Effect(Task_Complete_clip,transform,0.2f,0f);
     }
+
 }

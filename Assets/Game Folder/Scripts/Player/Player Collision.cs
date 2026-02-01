@@ -14,6 +14,7 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] private AudioClip Encounter;
     [SerializeField] private AudioClip Home;
 
+    public bool Returned_Wallet = false;
     public static Action Victory_Event;
 
     private void OnTriggerEnter(Collider other)
@@ -66,9 +67,19 @@ public class PlayerCollision : MonoBehaviour
 
         if (other.gameObject.CompareTag("Home"))
         {
+            if (!Returned_Wallet)
+            {
+                ReputationSystem.Reputation_Over.Invoke();
+                return;
+            }
             Victory_Event.Invoke();
             SoundEffectsManager.instance.Play_Single_Sound_Effect(Home, transform, 1, 0.5f);
         }
+    }
+
+    public void Wallet_Lock()
+    {
+        Returned_Wallet = true;
     }
     private void OnTriggerExit(Collider other)
     {
