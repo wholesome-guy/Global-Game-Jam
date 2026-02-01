@@ -10,8 +10,8 @@ public class NPCManager : MonoBehaviour
    {
         Vector3 desired_position =
             player.position +
-            player.forward * Distance +
-            player.right * Offset_Distance; 
+            player.GetChild(1).forward * Distance +
+            player.GetChild(1).right * Offset_Distance; 
         desired_position.y =transform.position.y;
 
         transform.DOMove(desired_position, 2.5f)
@@ -21,7 +21,9 @@ public class NPCManager : MonoBehaviour
                 CT.Interaction_Function();
             });
 
-        transform.DOLookAt(player.position, 2.5f);
+        Quaternion desired_rotation = Quaternion.LookRotation((player.position - desired_position) - new Vector3(0,(player.position - desired_position).y,0));
+
+        transform.DORotateQuaternion(desired_rotation, 2.5f);
         
     }
         
