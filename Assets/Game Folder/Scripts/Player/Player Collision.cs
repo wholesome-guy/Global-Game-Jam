@@ -11,6 +11,8 @@ public class PlayerCollision : MonoBehaviour
     [SerializeField] private NPCManager Crush;
     [SerializeField] private NPCManager Neighbour;
 
+    public static Action Victory_Event;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable"))
@@ -53,8 +55,13 @@ public class PlayerCollision : MonoBehaviour
                 keyboardInputManager.Conversation_Trigger.Interaction_Function();
                 keyboardInputManager.Can_Interact = false;
                 InteractionSystem.Press_F_Visible_Event.Invoke(false);
-            }
+             }
 
+        }
+
+        if (other.gameObject.CompareTag("Home"))
+        {
+            Victory_Event.Invoke();
         }
     }
     private void OnTriggerExit(Collider other)

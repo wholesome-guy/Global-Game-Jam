@@ -36,6 +36,11 @@ public class ObjectPoolManager : MonoBehaviour
         {
             Preload_Sound_Effects_Object();
         }
+        else if(Current_Scene == Scene.Game)
+        {
+            Preload_Sound_Effects_Object();
+
+        }
     }
 
     

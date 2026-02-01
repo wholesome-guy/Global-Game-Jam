@@ -3,6 +3,7 @@ using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class ReputationSystem : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class ReputationSystem : MonoBehaviour
 
     [SerializeField] private float Change_Text_Disappear_Time;
     [SerializeField] private CanvasGroup Reputation_Change_group;
+    public static Action Reputation_Over;
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class ReputationSystem : MonoBehaviour
     public void Reputation_Deplete(float change)
     {
         Current_Reputation -= change;
+        Current_Reputation = Mathf.Clamp(Current_Reputation, 0, Max_Reputation);
 
         Ratio_Current_Max_Reputation = Current_Reputation / Max_Reputation;
 
@@ -43,6 +46,11 @@ public class ReputationSystem : MonoBehaviour
 
         Reputation_Change_group.alpha = 1;
         StartCoroutine(Change_Fade_Out());
+
+        if(Current_Reputation <= 0)
+        {
+            Reputation_Over.Invoke();
+        }
     }
 
     private IEnumerator Change_Fade_Out()

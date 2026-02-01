@@ -3,6 +3,7 @@ using DialogueEditor;
 using TMPro;
 using UnityEngine;
 using System.Collections;
+using System;
 
 
 public class EnergySystem : MonoBehaviour
@@ -19,6 +20,8 @@ public class EnergySystem : MonoBehaviour
 
     [SerializeField] private CanvasGroup Energy_Change_group;
     [SerializeField] private float Change_Text_Disappear_Time;
+
+    public static Action Energy_Over;
 
     private void Start()
     {
@@ -37,6 +40,7 @@ public class EnergySystem : MonoBehaviour
     public void Energy_Deplete(float change)
     {
         Current_Energy -= change;
+        Current_Energy = Mathf.Clamp(Current_Energy, 0, Max_Energy);
 
         if (Mathf.Abs(change) <= Passive_Energy_Loss) return;
 
@@ -47,6 +51,13 @@ public class EnergySystem : MonoBehaviour
         Energy_Change_group.alpha = 1;
 
         StartCoroutine(Change_Fade_Out());
+
+        if(Current_Energy <= 5)
+        {
+            Energy_Over.Invoke();
+        }
+
+
     }
 
     private IEnumerator Change_Fade_Out()

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -29,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 Move_Direction;
     private bool Is_Inputing = true;
+    private Vector3 Linear_XZ_Velocity;
+
+    [SerializeField] private AudioSource FootSteps_Audio_Source;
+    [SerializeField] private AudioClip[] FootSteps_Audio_Clips;
+    private bool Footstep_Heard = false;
 
     private void Start()
     {
@@ -39,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        Linear_XZ_Velocity = new Vector3(Player_Rigidbody.linearVelocity.x, 0, Player_Rigidbody.linearVelocity.z);
         if (!Is_Inputing)
         {
             return;
@@ -46,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
         Inputs();
         Look();
+        FootSteps();
     }
 
     
@@ -53,10 +61,17 @@ public class PlayerMovement : MonoBehaviour
     private void OnEnable()
     {
         InteractionSystem.End_Interaction_Event += End_Interact;
+        PlayerCollision.Victory_Event += Game_Over;
+        EnergySystem.Energy_Over += Game_Over;
+        ReputationSystem.Reputation_Over += Game_Over;
     }
     private void OnDisable()
     {
         InteractionSystem.End_Interaction_Event -= End_Interact;
+        PlayerCollision.Victory_Event -= Game_Over;
+        EnergySystem.Energy_Over -= Game_Over;
+        ReputationSystem.Reputation_Over -= Game_Over;
+
     }
 
     private void FixedUpdate()
@@ -110,6 +125,29 @@ public class PlayerMovement : MonoBehaviour
     {
         Player_Rigidbody.AddForce(Player_Orientation.up*Jump_Force,ForceMode.Impulse);
     }
+    private void FootSteps()
+    {
+        if (Linear_XZ_Velocity.sqrMagnitude > 0 && !Footstep_Heard)
+        {
+            StartCoroutine(Next_FootStep());
+        }
+
+    }
+    private IEnumerator Next_FootStep()
+    {
+        Footstep_Heard = true;
+
+        AudioClip Clip = FootSteps_Audio_Clips[Random.Range(0, FootSteps_Audio_Clips.Length)];
+        float Pitch = Random.Range(0.8f, 1.2f);
+        FootSteps_Audio_Source.clip = Clip;
+        FootSteps_Audio_Source.pitch = Pitch;
+        FootSteps_Audio_Source.Play();
+        float moveSpeed = Linear_XZ_Velocity.magnitude;
+        float delay = Mathf.Clamp(3f / moveSpeed, 0.2f, 0.8f);
+        yield return new WaitForSeconds(delay);
+
+        Footstep_Heard = false;
+    }
 
     public void Start_Interact()
     {
@@ -126,8 +164,13 @@ public class PlayerMovement : MonoBehaviour
         Is_Inputing = true;
         Player_Rigidbody.constraints = RigidbodyConstraints.None;
         Player_Rigidbody.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationX;
+    }
 
-
+    private void Game_Over()
+    {
+        Is_Inputing = false;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
 
