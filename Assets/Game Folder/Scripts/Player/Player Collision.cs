@@ -5,6 +5,7 @@ public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] private KeyboardInputManager keyboardInputManager;
     public static Action<ConversationTrigger> Trigger_Conversation_Event;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Interactable"))

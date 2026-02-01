@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Player Values")]
     [SerializeField] private float Walk_Speed = 200f;
+    [SerializeField] private float Jump_Force =100f;
+    [SerializeField] private float Walking_Friction =1;
+    [SerializeField] private float Jumping_Friction =0;
     private float Move_Speed;
 
 
@@ -92,6 +95,20 @@ public class PlayerMovement : MonoBehaviour
 
             Player_Rigidbody.linearVelocity = new Vector3(Max_Velocity.x, Player_Rigidbody.linearVelocity.y, Max_Velocity.z);
         }
+
+        if (Player_Rigidbody.linearVelocity.y < -1)
+        {
+            Player_Rigidbody.linearDamping = Jumping_Friction;
+        }
+        else
+        {
+            Player_Rigidbody.linearDamping = Walking_Friction;
+        }
+    }
+
+    public void Jump()
+    {
+        Player_Rigidbody.AddForce(Player_Orientation.up*Jump_Force,ForceMode.Impulse);
     }
 
     public void Start_Interact()
