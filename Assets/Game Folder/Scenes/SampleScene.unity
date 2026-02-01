@@ -14,12 +14,12 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.01
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_Fog: 1
+  m_FogColor: {r: 0.14293341, g: 0.23961823, b: 0.2754717, a: 1}
+  m_FogMode: 1
+  m_FogDensity: 0.21
+  m_LinearFogStart: 357.4
+  m_LinearFogEnd: 357.41
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
@@ -27,7 +27,7 @@ RenderSettings:
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 20bc963da43ebde4abaa2afcf665bd19, type: 2}
-  m_HaloStrength: 0.5
+  m_HaloStrength: 0.564
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
@@ -762,14 +762,25 @@ PrefabInstance:
       value: 0.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8405728157188156460, guid: dad907ad96ca800478a37165a45ec410, type: 3}
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 748936450748425903, guid: dad907ad96ca800478a37165a45ec410,
+        type: 3}
+      insertIndex: 224
+      addedObject: {fileID: 1418220211}
     - targetCorrespondingSourceObject: {fileID: 7623496804139606019, guid: dad907ad96ca800478a37165a45ec410,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3610662}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dad907ad96ca800478a37165a45ec410, type: 3}
+--- !u!4 &17135748 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 748936450748425903, guid: dad907ad96ca800478a37165a45ec410,
+    type: 3}
+  m_PrefabInstance: {fileID: 17135747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &83476321
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,7 +1226,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 824378273}
+      - m_Target: {fileID: 1166786338}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2656,6 +2667,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203108489}
   m_CullTransparentMesh: 1
+--- !u!1 &223445001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223445002}
+  - component: {fileID: 223445003}
+  m_Layer: 0
+  m_Name: Home
+  m_TagString: Home
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223445002
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223445001}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.2, y: -0.48, z: 59.39}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1261102429}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &223445003
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223445001}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 47.22, y: 4.22, z: 12.92}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &239599901
 GameObject:
   m_ObjectHideFlags: 0
@@ -4806,7 +4870,7 @@ GameObject:
   - component: {fileID: 454333346}
   - component: {fileID: 454333348}
   - component: {fileID: 454333347}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wallet
   m_TagString: Wallet
   m_Icon: {fileID: 0}
@@ -4877,7 +4941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 3
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":375.2,"yPos":155},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"end","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":364.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":400.000061,"yPos":219.799988},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"end","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":389.300049,"yPos":86.79999},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh
     a wallet","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Player","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Player
@@ -6753,19 +6817,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 22
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":171.999725,"yPos":-42.59886},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Nod","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":548.81134,"yPos":-42.59886},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Elaborate
-    about the wallet","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":-108.80011,"yPos":274.202423},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Apologise","parentUIDs":[3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":210.399734,"yPos":283.002777},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Smile","parentUIDs":[3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":820.8239,"yPos":275.002472},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
-    Him","parentUIDs":[4],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":508.810516,"yPos":285.402679},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Be
-    Quiet","parentUIDs":[4],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":379.2004,"yPos":675.003357},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"End\n","parentUIDs":[10,14,15,16,21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":-368.000244,"yPos":579.80426},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Emphatise
-    and Apologise","parentUIDs":[9],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":-40.800293,"yPos":517.403748},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Deny","parentUIDs":[9],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Energy","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":30}],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":325.3002,"yPos":-193.99939},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Heyy
-    man, heading home are you?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":30}],"NodeUID":5},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":223.999954,"yPos":63.2010345},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"No
-    in the mood to chat. I see","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":40}],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":492.809174,"yPos":61.6009369},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    are such a kind man to return that.Most people would just keep it for themselves","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":90}],"NodeUID":12},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":30}],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-197.600159,"yPos":407.2037},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"It''s
-    okay...... Sometims i feel you avoid me and you treat me like I am different","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":219.999847,"yPos":460.8035},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"oh...........","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-29.6003418,"yPos":608.805},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Are
-    you straight up denying me?....Fine","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-292.800262,"yPos":746.404968},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
-    you for listening, im glad we could talk","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":559.201355,"yPos":418.4036},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    are very humble man","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":824.8021,"yPos":358.4034},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Maybe
-    take some money out for both of us and tell thatyou found it like that","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":718.4018,"yPos":587.204041},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"....................","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":36.7995,"yPos":-595.3994},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Nod","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":413.611084,"yPos":-595.3994},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Elaborate
+    about the wallet","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":-244.000336,"yPos":-278.598022},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Apologise","parentUIDs":[3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":75.19951,"yPos":-269.797668},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Smile","parentUIDs":[3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":685.623657,"yPos":-277.798},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
+    Him","parentUIDs":[4],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":373.6103,"yPos":-267.397766},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Be
+    Quiet","parentUIDs":[4],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":244.000183,"yPos":122.202835},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"End\n","parentUIDs":[10,14,15,16,21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":-503.20047,"yPos":27.0036583},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Emphatise
+    and Apologise","parentUIDs":[9],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":-176.000519,"yPos":-35.3968964},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Deny","parentUIDs":[9],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Energy","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":30}],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":190.099976,"yPos":-746.7999},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Heyy
+    man, heading home are you?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":30}],"NodeUID":5},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":88.79974,"yPos":-489.599365},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"No
+    in the mood to chat. I see","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":40}],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":357.608948,"yPos":-491.199463},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    are such a kind man to return that.Most people would just keep it for themselves","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":90}],"NodeUID":12},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":30}],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-332.800385,"yPos":-145.596909},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"It''s
+    okay...... Sometims i feel you avoid me and you treat me like I am different","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":84.79962,"yPos":-91.99715},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"oh...........","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-164.800568,"yPos":56.0044479},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Are
+    you straight up denying me?....Fine","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":-428.0005,"yPos":193.6044},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Thank
+    you for listening, im glad we could talk","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":424.0011,"yPos":-134.3971},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    are very humble man","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":689.6019,"yPos":-194.397186},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Maybe
+    take some money out for both of us and tell thatyou found it like that","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":583.201538,"yPos":34.4035034},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"....................","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Neighbor","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Neighbor
   DefaultSprite: {fileID: 0}
@@ -6795,7 +6859,31 @@ MonoBehaviour:
     type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1497427998}
+        m_TargetAssemblyTypeName: InteractionSystem, Assembly-CSharp
+        m_MethodName: End_Interaction_Function
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 824378273}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &824378276
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6914,30 +7002,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 24
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":329.5,"yPos":-898.600464},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Ask
-    for Bread","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":207.500061,"yPos":-645.6006},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Say
-    his name","parentUIDs":[2],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":485.500122,"yPos":-643.6006},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Claim
-    to forget","parentUIDs":[2],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":267.500061,"yPos":-379.601135},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Ask
-    for Elaboration","parentUIDs":[5],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":31.5001221,"yPos":-383.601135},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Reflex","parentUIDs":[5],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":23}],"EditorInfo":{"isRoot":false,"xPos":-198.499969,"yPos":-137.601563},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Apologize","parentUIDs":[9],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-429.499939,"yPos":-136.60144},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Smile
-    Harder","parentUIDs":[9],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":724.5039,"yPos":-377.601135},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Smile","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":493.500244,"yPos":-379.601135},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Deny","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":268.500061,"yPos":-139.401367},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Laugh","parentUIDs":[10],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":40.5001221,"yPos":-138.60144},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"Pretend
-    to feel bad","parentUIDs":[10],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":353.5,"yPos":130.598892},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"End","parentUIDs":[13,16,17,21,22,23],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Energy","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":328.5,"yPos":-1035.60059},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hey
-    man, ya'' need something?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":10}],"NodeUID":3},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":10}],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":328.5,"yPos":-783.6008},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure.
-    will be done in a Jiffy. Say, remember that boy ya'' used to play with?","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":205.500183,"yPos":-515.6008},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Yeah,
-    him. I heard from him the other day. Apparently he''s not doing very well.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":20}],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":487.500122,"yPos":-512.6008},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"That''s
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":302.300049,"yPos":-860.1994},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Ask
+    for Bread","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":180.30011,"yPos":-607.199768},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Say
+    his name","parentUIDs":[2],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":458.300171,"yPos":-605.199768},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Claim
+    to forget","parentUIDs":[2],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":240.30011,"yPos":-341.200684},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Ask
+    for Elaboration","parentUIDs":[5],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":4.300171,"yPos":-345.200684},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Reflex","parentUIDs":[5],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":23}],"EditorInfo":{"isRoot":false,"xPos":-225.699921,"yPos":-99.20062},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Apologize","parentUIDs":[9],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-456.6999,"yPos":-98.2005},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Smile
+    Harder","parentUIDs":[9],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":697.303955,"yPos":-339.200684},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Smile","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":466.3003,"yPos":-341.200684},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Deny","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":241.30011,"yPos":-101.000427},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Laugh","parentUIDs":[10],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":13.3001709,"yPos":-100.2005},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"Pretend
+    to feel bad","parentUIDs":[10],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":326.300049,"yPos":168.9999},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"End","parentUIDs":[13,16,17,21,22,23],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Energy","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":301.300049,"yPos":-997.1995},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hey
+    man, ya'' need something?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":10}],"NodeUID":3},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":10}],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":301.300049,"yPos":-745.1999},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure.
+    will be done in a Jiffy. Say, remember that boy ya'' used to play with?","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":178.300232,"yPos":-477.200073},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Yeah,
+    him. I heard from him the other day. Apparently he''s not doing very well.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":20}],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":460.300171,"yPos":-474.200073},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"That''s
     surprising, I thought ya'' both were close and stuff. I guess friends fall apart
-    sometimes.","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-317.5,"yPos":-265.601257},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Why''re
-    you smiling? You find it funny?","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":18},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":149.5,"yPos":-273.601379},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"He
-    recently got fired from his job, claims he can''t find any more.","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-428.499939,"yPos":-66.6013},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
-    a weird one eh? The bread is done, I''d suggest you go.","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":729.303955,"yPos":-65.40132},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
+    sometimes.","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-344.699951,"yPos":-227.200348},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Why''re
+    you smiling? You find it funny?","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":18},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":122.300049,"yPos":-235.200455},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"He
+    recently got fired from his job, claims he can''t find any more.","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-455.6999,"yPos":-28.2006378},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
+    a weird one eh? The bread is done, I''d suggest you go.","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":702.104,"yPos":-27.0006866},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"You''re
     smiling about friends growing apart? You''re a weird one, eh? The bread is done,
     I''d suggest you go","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"
-    Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":496.500244,"yPos":-64.60127},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Really?
+    Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":469.3003,"yPos":-26.2006378},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Really?
     Well no point in telling ya'' what I was about to tell you if you don''t remember
-    him. The bread is done, you can just take it and leave","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":37.5001221,"yPos":-62.6015167},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Tell
+    him. The bread is done, you can just take it and leave","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":10.3001709,"yPos":-24.200882},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Tell
     me about it. Poor fella, he is.  Oh would you look at that? Your bread is done.
-    Was nice talking to you.","parentUIDs":[19],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":268.9002,"yPos":-61.00142},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"Eh?
+    Was nice talking to you.","parentUIDs":[19],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":241.700256,"yPos":-22.6008148},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"Eh?
     Maybe I was wrong about you two being close. Did ya'' hate him or something.
-    Actually, hold that thought. Your bread is done you shout just go home.","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-198.499969,"yPos":-64.60127},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"Ya''
+    Actually, hold that thought. Your bread is done you shout just go home.","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-225.699921,"yPos":-26.2006378},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"Ya''
     better watch how you act in public. Speak wrong to the wrong man and you''re
     gonna be a goner.","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Baker","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -7059,7 +7147,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 295598508}
-  - {fileID: 1770219992}
+  - {fileID: 1234912995}
   m_Father: {fileID: 1261102429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &999512753
@@ -7216,8 +7304,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59a9cd989331d14e821869a174371f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCManager
-  Distance: 0.75
-  Offset_Distance: 0.5
+  Distance: 2
+  Offset_Distance: -0.5
   CT: {fileID: 824378274}
 --- !u!1 &1058962801
 GameObject:
@@ -7405,17 +7493,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 12b9349d69ef9fc4ebb92cec18c85528,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12b9349d69ef9fc4ebb92cec18c85528,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.15
+      value: -4.56
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12b9349d69ef9fc4ebb92cec18c85528,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 12b9349d69ef9fc4ebb92cec18c85528,
         type: 3}
@@ -7456,7 +7544,7 @@ PrefabInstance:
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2b43c9edbe2c59342a7c17d30fe9ca20, type: 2}
+      objectReference: {fileID: 2100000, guid: 9fa4c529669065f479db3f15d75e9c70, type: 2}
     - target: {fileID: 919132149155446097, guid: 12b9349d69ef9fc4ebb92cec18c85528,
         type: 3}
       propertyPath: m_Name
@@ -7511,27 +7599,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 40
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":352.500061,"yPos":-569.601135},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"Select
-    Book","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":177.500061,"yPos":-341.602142},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"Tell
-    The Truth","parentUIDs":[25],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":494.700073,"yPos":-345.8019},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"Say
-    It''s For a Friend","parentUIDs":[25],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32}],"EditorInfo":{"isRoot":false,"xPos":488.9001,"yPos":-104.801727},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"Agree","parentUIDs":[28],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":false,"xPos":752.5013,"yPos":-90.60187},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"Act
-    Confused","parentUIDs":[28],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":372.500061,"yPos":160.399872},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"End","parentUIDs":[32,34,37,39],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":37}],"EditorInfo":{"isRoot":false,"xPos":178.500061,"yPos":-94.60181},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"Smile","parentUIDs":[29],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":39}],"EditorInfo":{"isRoot":false,"xPos":-76.49994,"yPos":-94.60181},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"Act
-    Offended","parentUIDs":[29],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Energy","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":10}],"NodeUID":24}],"EditorInfo":{"isRoot":true,"xPos":352.500061,"yPos":-695.600037},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":284.5,"yPos":-590.400757},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"Select
+    Book","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":109.5,"yPos":-362.401672},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"Tell
+    The Truth","parentUIDs":[25],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":426.7,"yPos":-366.60144},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"Say
+    It''s For a Friend","parentUIDs":[25],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":32}],"EditorInfo":{"isRoot":false,"xPos":420.900024,"yPos":-125.601608},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"Agree","parentUIDs":[28],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":34}],"EditorInfo":{"isRoot":false,"xPos":684.5012,"yPos":-111.401749},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"Act
+    Confused","parentUIDs":[28],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":304.5,"yPos":139.600281},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"End","parentUIDs":[32,34,37,39],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":37}],"EditorInfo":{"isRoot":false,"xPos":110.5,"yPos":-115.401749},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"Smile","parentUIDs":[29],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":39}],"EditorInfo":{"isRoot":false,"xPos":-144.5,"yPos":-115.401749},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"Act
+    Offended","parentUIDs":[29],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Energy","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":10}],"NodeUID":24}],"EditorInfo":{"isRoot":true,"xPos":284.5,"yPos":-716.4},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
     evening, which book do you wish to buy?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bookstore
-    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":26},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":30}],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":350.700073,"yPos":-468.6017},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh...
+    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":26},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":30}],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":282.7,"yPos":-489.401},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh...
     That book... is it for a friend?","parentUIDs":[24],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bookstore
-    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":20}],"NodeUID":30},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":497.500061,"yPos":-232.602081},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":20}],"NodeUID":30},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":429.5,"yPos":-253.401749},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"I
     see... your friend certainly has an intersting taste in books","parentUIDs":[27],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bookstore
-    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":36},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":20}],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":178.500061,"yPos":-236.6019},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":36},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":20}],"NodeUID":38}],"EditorInfo":{"isRoot":false,"xPos":110.5,"yPos":-257.4016},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"I
     see... you certainly have an... interesting taste in books","parentUIDs":[26],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bookstore
-    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":496.500061,"yPos":9.398495},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"Here''s
+    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":428.5,"yPos":-11.4013214},"ID":32,"ParamActions":[],"TMPFontGUID":null,"Text":"Here''s
     your book, thanks for visiting us.","parentUIDs":[30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bookstore
-    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":751.5015,"yPos":7.598324},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"Right,
+    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":683.501465,"yPos":-13.2014771},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"Right,
     I guess you don''t know what it''s about. Here''s your book, thanks for visiting
     us","parentUIDs":[31],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bookstore
-    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":181.500061,"yPos":9.398495},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"...Here''s
+    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":113.5,"yPos":-11.4013214},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"...Here''s
     your book.","parentUIDs":[36],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bookstore
-    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":-73.49994,"yPos":7.598446},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
+    Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":33}],"EditorInfo":{"isRoot":false,"xPos":-141.5,"yPos":-13.201355},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"I''m
     sorry, you''re free to like whichever books you want to. Here''s your book, thanks
     for visiting us.","parentUIDs":[38],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bookstore
     Owner","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
@@ -7586,7 +7674,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 824378273}
+      - m_Target: {fileID: 1166786338}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -7646,6 +7734,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 83476324}
+  - {fileID: 1700561905}
   m_Father: {fileID: 1261102429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1185971582
@@ -7801,6 +7890,96 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185971582}
   m_CullTransparentMesh: 1
+--- !u!1 &1234912994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1234912995}
+  - component: {fileID: 1234912997}
+  - component: {fileID: 1234912996}
+  m_Layer: 6
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1234912995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234912994}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -2.74, z: 0}
+  m_LocalScale: {x: 1.03, y: 0.01, z: 8.42}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 920106037}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!23 &1234912996
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234912994}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2c49fe9276dfced4a8b1bf6f0fec7003, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1234912997
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234912994}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1240579965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7889,6 +8068,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: wallet
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c62ba265b1875dc43a5690a7952b2874,
+        type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7942,6 +8126,7 @@ Transform:
   - {fileID: 1970602677}
   - {fileID: 1765583090}
   - {fileID: 454333345}
+  - {fileID: 223445002}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1270677681
@@ -7995,6 +8180,96 @@ Transform:
   - {fileID: 725673475}
   m_Father: {fileID: 1261102429}
   m_LocalEulerAnglesHint: {x: 0, y: -307.2, z: 0}
+--- !u!1 &1305612283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1305612284}
+  - component: {fileID: 1305612286}
+  - component: {fileID: 1305612285}
+  m_Layer: 6
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1305612284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305612283}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -2.48, z: 0}
+  m_LocalScale: {x: 1.03, y: 0.01, z: 8.42}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1970602677}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!23 &1305612285
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305612283}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2c49fe9276dfced4a8b1bf6f0fec7003, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1305612286
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305612283}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1329598094
 GameObject:
   m_ObjectHideFlags: 0
@@ -8320,6 +8595,105 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 524ec2b9961deee45beeb6e2fda93020,
     type: 3}
   m_PrefabInstance: {fileID: 1341302965}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1418220210
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 17135748}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -35.74
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 168.22
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 90c52d91494e5214990cdbe71478378d, type: 2}
+    - target: {fileID: 919132149155446097, guid: 483f1fb1e3028b942b44752974de9acc,
+        type: 3}
+      propertyPath: m_Name
+      value: Police Station2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 483f1fb1e3028b942b44752974de9acc, type: 3}
+--- !u!4 &1418220211 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 483f1fb1e3028b942b44752974de9acc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1418220210}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1472896456
 PrefabInstance:
@@ -8846,6 +9220,96 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 565116055}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1700561904
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700561905}
+  - component: {fileID: 1700561907}
+  - component: {fileID: 1700561906}
+  m_Layer: 6
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700561905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700561904}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.93, y: -2.49, z: -0.79}
+  m_LocalScale: {x: 1.03, y: 0.01, z: 8.42}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1166786342}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1700561906
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700561904}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 2c49fe9276dfced4a8b1bf6f0fec7003, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1700561907
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700561904}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1765583088
 GameObject:
   m_ObjectHideFlags: 0
@@ -8890,103 +9354,13 @@ Transform:
   m_GameObject: {fileID: 1765583088}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.6567172, z: -0, w: -0.754137}
-  m_LocalPosition: {x: 0.5, y: 0.89999986, z: -2.199997}
+  m_LocalPosition: {x: -5.11, y: 0.89999986, z: 1.03}
   m_LocalScale: {x: 0.74999994, y: 0.74999994, z: 0.74999994}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1148221704}
   m_Father: {fileID: 1261102429}
   m_LocalEulerAnglesHint: {x: 0, y: -442.1, z: 0}
---- !u!1 &1770219991
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1770219992}
-  - component: {fileID: 1770219994}
-  - component: {fileID: 1770219993}
-  m_Layer: 6
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1770219992
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770219991}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.39, y: -2.33, z: -1.03}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 920106037}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1770219993
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770219991}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 2c49fe9276dfced4a8b1bf6f0fec7003, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1770219994
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1770219991}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1822355390
 GameObject:
   m_ObjectHideFlags: 0
@@ -9204,6 +9578,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: InteractionSystem, Assembly-CSharp
         m_MethodName: End_Interaction_Function
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 824378273}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9763,7 +10149,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2ebd42698050efe4c861900e181d3b00,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.88212687
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2ebd42698050efe4c861900e181d3b00,
         type: 3}
@@ -9773,7 +10159,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2ebd42698050efe4c861900e181d3b00,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.47101188
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2ebd42698050efe4c861900e181d3b00,
         type: 3}
@@ -9788,7 +10174,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2ebd42698050efe4c861900e181d3b00,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 56.2
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2ebd42698050efe4c861900e181d3b00,
         type: 3}
@@ -10019,32 +10405,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 30
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":129.606628,"yPos":-600.2029},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Pretend
-    to Hesitate","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":395.202972,"yPos":-597.803},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Show
-    the Wallet","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":24}],"EditorInfo":{"isRoot":false,"xPos":648.8119,"yPos":-604.203},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Explain
-    the story","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":940.0375,"yPos":-603.402954},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Lie","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":93.6064453,"yPos":-393.8034},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"No,
-    I want to return a wallet","parentUIDs":[5],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":-213.5946,"yPos":-413.003235},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes,
-    i dont feel okay, i dont feel normal","parentUIDs":[5],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-354.3964,"yPos":-222.600769},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Explain\n","parentUIDs":[9],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":293.605835,"yPos":149.402985},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"End","parentUIDs":[10,15,22,23,27,28,29],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":332.005951,"yPos":-361.803162},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Ask
-    him to take it","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":318.406067,"yPos":-163.399979},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"explain
-    everything calmy","parentUIDs":[19],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":23}],"EditorInfo":{"isRoot":false,"xPos":632.011841,"yPos":-163.399857},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Pretend
-    to get scared","parentUIDs":[19],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":981.6112,"yPos":-225.802246},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"Neutral","parentUIDs":[24],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":698.412964,"yPos":-323.40332},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"Reflex","parentUIDs":[24],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Energy","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":30}],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":10}],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":60}],"NodeUID":3},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":476.499969,"yPos":-758.8002},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":12.8066406,"yPos":-705.0026},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Pretend
+    to Hesitate","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":278.402985,"yPos":-702.6027},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Show
+    the Wallet","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":24}],"EditorInfo":{"isRoot":false,"xPos":532.0119,"yPos":-709.002747},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Explain
+    the story","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":823.2375,"yPos":-708.2027},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Lie","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":-23.1935425,"yPos":-498.603149},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"No,
+    I want to return a wallet","parentUIDs":[5],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":-330.394562,"yPos":-517.8029},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes,
+    i dont feel okay, i dont feel normal","parentUIDs":[5],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":-471.19635,"yPos":-327.400635},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Explain\n","parentUIDs":[9],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":176.805847,"yPos":43.0029259},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"End","parentUIDs":[10,15,22,23,27,28,29],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":215.205963,"yPos":-466.6029},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Ask
+    him to take it","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":22}],"EditorInfo":{"isRoot":false,"xPos":201.606079,"yPos":-268.1997},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"explain
+    everything calmy","parentUIDs":[19],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":23}],"EditorInfo":{"isRoot":false,"xPos":515.211853,"yPos":-268.1996},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Pretend
+    to get scared","parentUIDs":[19],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":28}],"EditorInfo":{"isRoot":false,"xPos":864.8112,"yPos":-330.6021},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"Neutral","parentUIDs":[24],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":581.6129,"yPos":-428.203064},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"Reflex","parentUIDs":[24],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Energy","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":30}],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":10}],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":60}],"NodeUID":3},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":359.699982,"yPos":-863.600037},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
     young man,How can i help you?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Police
-    Man","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":70}],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":-39.1942139,"yPos":-520.0027},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Are
-    you okay son?? Are you in any danger?","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-364.796783,"yPos":-325.602417},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"What''s
-    wrong? Why dont you feel normal?","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-81.59436,"yPos":-312.002625},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh
+    Man","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":70}],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":-155.9942,"yPos":-624.8023},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Are
+    you okay son?? Are you in any danger?","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":-481.596741,"yPos":-430.402161},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"What''s
+    wrong? Why dont you feel normal?","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-198.394348,"yPos":-416.802429},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh
     is that it? You dont  have to hisitate so much, i just need you to fill this
-    lost and found object form","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":-288.794342,"yPos":-137.600372},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    feel like I''m being contro............ ","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Player","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":-527.197632,"yPos":-136.8002},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
-    officer Im normal, Im okay,I just have to get to home","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Player","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-402.3971,"yPos":-25.60109},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh
-    Okay, as you say","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":382.405975,"yPos":-480.0028},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    found it somewhere? Wait i know this wallet","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":60}],"NodeUID":20},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":40}],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":447.206268,"yPos":-283.2025},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"you
+    lost and found object form","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":-405.5943,"yPos":-242.40007},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    feel like I''m being contro............ ","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Player","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":15}],"EditorInfo":{"isRoot":false,"xPos":-643.9976,"yPos":-241.5999},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
+    officer Im normal, Im okay,I just have to get to home","parentUIDs":[13],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Player","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":-519.1971,"yPos":-130.400909},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh
+    Okay, as you say","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":265.606,"yPos":-584.8024},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    found it somewhere? Wait i know this wallet","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":60}],"NodeUID":20},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":40}],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":330.406281,"yPos":-388.002319},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"you
     haven''t told me where and when you found this. What if you took some monmey
-    from the inside?","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":323.206024,"yPos":-47.19928},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"oh
-    thats pretty much everything, okay you can go Sir","parentUIDs":[20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":596.013,"yPos":-68.79962},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"Don''t
-    be scared, its fine you can go","parentUIDs":[21],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":20}],"NodeUID":25},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":26}],"EditorInfo":{"isRoot":false,"xPos":696.813,"yPos":-470.402954},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh, 
+    from the inside?","parentUIDs":[18],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":206.406036,"yPos":-151.999161},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"oh
+    thats pretty much everything, okay you can go Sir","parentUIDs":[20],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":479.213,"yPos":-173.599472},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"Don''t
+    be scared, its fine you can go","parentUIDs":[21],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":20}],"NodeUID":25},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Energy","CheckType":2,"RequiredValue":5}],"NodeUID":26}],"EditorInfo":{"isRoot":false,"xPos":580.013,"yPos":-575.2026},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh, 
     thank you for returnig the wallet. This wallet belongs to a murder victim that
-    happened on the street you mentioned.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":908.0116,"yPos":-9.600967},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"You
-    are smiling?? Please leave","parentUIDs":[26],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":1120.0105,"yPos":118.401474},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":".....................","parentUIDs":[25],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":1443.21289,"yPos":226.400848},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    happened on the street you mentioned.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":791.2116,"yPos":-114.400864},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"You
+    are smiling?? Please leave","parentUIDs":[26],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":1003.21051,"yPos":13.6014748},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":".....................","parentUIDs":[25],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":1326.41284,"yPos":121.600967},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"You
     are here for because.......you wanted donuts? GO AWAY DRUNKARD!","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Policeman","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Policeman
@@ -10140,8 +10526,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10, y: 5, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 15.96, y: 5, z: 10}
+  m_Center: {x: -2.84, y: 0, z: 0}
 --- !u!4 &1970602677
 Transform:
   m_ObjectHideFlags: 0
@@ -10156,6 +10542,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 737790350}
+  - {fileID: 1305612284}
   m_Father: {fileID: 1261102429}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1975000075
@@ -10382,7 +10769,7 @@ GameObject:
   - component: {fileID: 1998912244}
   - component: {fileID: 1998912246}
   - component: {fileID: 1998912245}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ConversationEventInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
