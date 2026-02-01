@@ -5,6 +5,11 @@ public class PlayerCollision : MonoBehaviour
 {
     [SerializeField] private KeyboardInputManager keyboardInputManager;
     public static Action<ConversationTrigger> Trigger_Conversation_Event;
+    [SerializeField] private PlayerMovement Player_Movement;
+
+    [SerializeField] private NPCManager Colleague;
+    [SerializeField] private NPCManager Crush;
+    [SerializeField] private NPCManager Neighbour;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -13,6 +18,42 @@ public class PlayerCollision : MonoBehaviour
             keyboardInputManager.Can_Interact = true;
             InteractionSystem.Press_F_Visible_Event.Invoke(true);
             keyboardInputManager.Conversation_Trigger = other.GetComponent<ConversationTrigger>();
+
+            if (other.gameObject.CompareTag("Colleague"))
+            {
+                Player_Movement.Start_Interact();
+                Colleague.Move_to_Player(transform);
+
+                keyboardInputManager.Can_Interact = false;
+                InteractionSystem.Press_F_Visible_Event.Invoke(false);
+                keyboardInputManager.Conversation_Trigger = null;
+            }
+            if (other.gameObject.CompareTag("Crush"))
+            {
+                Player_Movement.Start_Interact();
+                Crush.Move_to_Player(transform);
+
+                keyboardInputManager.Can_Interact = false;
+                InteractionSystem.Press_F_Visible_Event.Invoke(false);
+                keyboardInputManager.Conversation_Trigger = null;
+            }
+            if (other.gameObject.CompareTag("Neighbour"))
+            {
+                Player_Movement.Start_Interact();
+                Neighbour.Move_to_Player(transform);
+
+                keyboardInputManager.Can_Interact = false;
+                InteractionSystem.Press_F_Visible_Event.Invoke(false);
+                keyboardInputManager.Conversation_Trigger = null;
+            }
+            
+             if (other.gameObject.CompareTag("Wallet"))
+             {
+                Player_Movement.Start_Interact();
+                keyboardInputManager.Conversation_Trigger.Interaction_Function();
+                keyboardInputManager.Can_Interact = false;
+                InteractionSystem.Press_F_Visible_Event.Invoke(false);
+            }
 
         }
     }

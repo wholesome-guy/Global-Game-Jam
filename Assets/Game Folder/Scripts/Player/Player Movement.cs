@@ -43,9 +43,9 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
+        Move();
         Inputs();
         Look();
-        Move();
     }
 
     
